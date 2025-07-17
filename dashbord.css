@@ -1,0 +1,167 @@
+/* Reset + Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+  transition: background 0.3s, color 0.3s;
+}
+
+
+/* Dark Mode (when checkbox checked) */
+#dark-toggle:checked ~ header {
+  background-color: #222;
+  color:  #ff6a00;
+}
+#dark-toggle:checked ~ main,
+#dark-toggle:checked ~ main section {
+  background-color: #121212;
+  color: #eee;
+}
+#dark-toggle:checked ~ main section a {
+  color: #9fd3ff;
+}
+#dark-toggle:checked ~ .toggle-label {
+  background-color: #ff6a00;
+  color: #fff;
+}
+
+/* Toggle Button */
+.toggle-label {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  background-color:#222;
+  padding: 10px 15px;
+  border-radius: 30px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  cursor: pointer;
+  z-index: 1000;
+  font-size: 14px;
+  transition: background 0.3s;
+  color: #ff6a00;
+}
+
+
+header {
+  background-color: #ff6a00;
+  color: white;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.toggle-container{
+    background-color: #ff6a00;
+}
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+
+}
+.logo1 {
+  width: 100px;
+  margin-bottom: 20px;
+}
+.coding{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    margin-bottom: 200px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding-right: 110px;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  animation: hoverAnimation 0.3s ease-in-out;
+  
+}
+nav ul li a:hover {
+  background-color: #eee;
+  border-radius: 10px;
+  color: #ff6a00;
+   
+
+}
+
+main {
+  padding: 30px;
+}
+.video-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px #ff6a00;
+    
+}
+section {
+  margin-bottom: 40px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: background 0.3s, color 0.3s;
+}
+h2 {
+  margin-bottom: 15px;
+  color: #ff6a00;
+}
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+form button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #ff6a00;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+form button:hover {
+  background-color: #e55b00;
+}
+ul li {
+  margin-bottom: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .toggle-label {
+     
+    font-size: 12px;
+    position: absolute; 
+    top: 0; 
+    right: 0;
+  }
+}
